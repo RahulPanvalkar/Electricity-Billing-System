@@ -1,0 +1,158 @@
+/*Login form*/
+.form-container {
+	align-self: start;
+	width: 25rem;
+	margin: 4rem;
+	padding: 2.5rem;
+	background-color: #fff;
+	background: var(--c-form-bg);
+	border-radius: 3.125rem;
+	box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+}
+
+.form-container h1 {
+	text-align: center;
+	margin-bottom: 1.875rem;
+}
+
+.form-group {
+	margin-bottom: 1rem;
+}
+
+.form-group label {
+	display: block;
+	margin-bottom: 0.3125rem;
+	font-weight: bold;
+}
+
+.form-group input[type="number"], .form-group input[type="text"], .form-group select,
+.form-group input[type="password"], .form-group input[type="date"], .form-group input[type="email"] {
+	width: 100%;
+	padding: 0.625rem;
+	border-radius: 0.25rem;
+	border: 0.0625rem solid #ccc;
+    background: var(--c-input-field-bg);
+    outline: none;
+}
+
+input:focus {
+	border:none;
+	border-color: #4CAF50;
+	box-shadow: 0 0 8px rgba(76, 175, 80, 0.6);
+}
+
+.form-group button {
+	width: 100%;
+	padding: 0.625rem;
+	background-color: var(--c-submit-btn-bg);
+	border: none;
+	color: #fff;
+	font-weight: bold;
+	cursor: pointer;
+	border-radius: 0.25rem;
+}
+
+.form-group button:hover {
+	background-color: var(--c-submit-btn-hover);
+}
+
+.text-center {
+	text-align: center;
+	margin: 0.625rem;
+}
+
+/*Registration form*/
+.reg-form-container {
+	align-self: start;
+	max-width: 25rem;
+	min-width: 25rem;
+	margin: 3rem;
+	padding: 2.5rem;
+	background-color: #fff;
+	background: var(--c-form-bg);
+	border-radius: 3.125rem;
+	box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+}
+
+.reg-form-container h1 {
+	text-align: center;
+	margin-bottom: 1.875rem;
+}
+
+.reg-form-container input[type="email"], .reg-form-container input[type="password"],
+.reg-form-container input[type="number"], .reg-form-container input[type="text"] {
+	width: 100%;
+	padding: 0.625rem;
+	margin-bottom: 1.25rem;
+	border: 0.0625rem solid #ccc;
+	border-radius: 0.25rem;
+	box-sizing: border-box;
+	background: var(--c-input-field-bg);
+}
+
+.reg-form-container input[type="checkbox"] {
+	align-self: flex-start;
+}
+
+.reg-form-container button {
+	width: 100%;
+	padding: 0.625rem;
+	background-color: var(--c-submit-btn-bg);
+	color: #fff;
+	border: none;
+	border-radius: 0.25rem;
+	cursor: pointer;
+}
+
+.reg-form-container button[type="submit"]:hover {
+	background-color: var(--c-submit-btn-hover);
+}
+
+.reg-form-container p {
+	font-size: 1rem;
+	color: #000;
+	text-align: center;
+	margin-top: 1.25rem;
+}
+
+/*Add Entity(Connection, Bill) Form*/
+.add-form-container h1 {
+    text-align: center;
+    margin-bottom: 1.875rem;
+}
+.add-form-container {
+    width: 50%;
+    border: 0.0625rem solid white;
+    margin: 3rem;
+    padding: 2.5rem;
+    align-self: start;
+    background-color: #fff;
+    background: var(--c-form-bg);
+    border-radius: 3.125rem;
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+}
+.add-form-group {
+    display: flex;
+    flex-direction: column;
+    margin: 0.625rem;
+}
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.25rem;
+}
+.add-button {
+    width: 100%;
+    margin-top: 0.625rem;
+    padding: 0.625rem;
+    background-color: var(--c-submit-btn-bg);
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0.25rem;
+}
+
+.add-button:hover {
+    background-color: var(--c-submit-btn-hover);
+}

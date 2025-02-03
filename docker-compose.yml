@@ -1,0 +1,26 @@
+services:
+    electricity-billing-system:
+        image: electricity-billing-system:latest
+        container_name: ebs
+        build:
+            context: .
+            dockerfile: Dockerfile
+        environment:
+            ENV: prod
+            LOG_LEVEL: INFO
+            #DB_HOST:  ${DB_HOST}
+            #DB_NAME: ${DB_NAME}
+            #DB_USERNAME: ${DB_USERNAME}
+            #DB_PASSWORD: ${DB_PASSWORD}
+            PROD_DB_HOST: ${PROD_DB_HOST}
+            PROD_DB_NAME: ${PROD_DB_NAME}
+            PROD_DB_USERNAME: ${PROD_DB_USERNAME}
+            PROD_DB_PASSWORD: ${PROD_DB_PASSWORD}
+            SMTP_HOST: ${SMTP_HOST}
+            SMTP_PORT: ${SMTP_PORT}
+            SMTP_USERNAME: ${SMTP_USERNAME}
+            SMTP_PASSWORD: ${SMTP_PASSWORD}
+        ports:
+            - "8080:8080"
+        volumes:
+            - ./logs:/usr/local/tomcat/logs

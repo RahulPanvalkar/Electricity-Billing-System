@@ -1,0 +1,370 @@
+:root {
+	--c-menu-link-selected: #8eb3e7ad;
+	--c-menu-link-hover: #a3a3a3;
+	--default-transition: .3s ease;
+    --c-form-bg: #fff;
+	--c-input-field-bg: #fff;
+	--c-submit-btn-bg: #0f0f0f;
+	--c-submit-btn-hover: #00BCD4;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+
+body {
+	background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(/images/background.jpg);
+	background-size: cover;
+	font-family: montserrat;
+	display: flex;
+	flex-direction: column;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+/*Navbar*/
+nav {
+	display: block;
+	background: transparent;
+	height: 3.125rem;
+	width: 100%;
+	margin-top: 1rem;
+}
+
+.home-logo {
+	display: inline-block;
+	margin-left: 1.25rem;
+}
+
+.logo {
+	color: white;
+	font-size: 2.5rem;
+	line-height: 3.125rem;
+	padding: 0rem;
+	font-weight: bold;
+}
+
+nav ul {
+	float: right;
+	margin-right: 1.25rem;
+}
+
+.dd-list {
+	display: inline-block;
+	line-height: 3.125rem;
+	margin: 0 0.3125rem;
+}
+
+.link-tag, .dropbtn {
+	color: white;
+	font-size: 1.25rem;
+	font-weight: bold;
+	padding: 0.4375rem 0.8125rem;
+	border-radius: 1.25rem;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.link-tag:hover, .dropbtn:hover {
+	background: var(--c-menu-link-hover);
+	transition: var(--default-transition);
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background: transparent;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.dropdown-content a {
+	color: black;
+	font-size: 0.75rem;
+	padding: 0 0.3125rem;
+	display: block;
+	border: 0.125rem solid #ffffff;
+	border-radius: 1.25rem;
+	background-color: #E0E0E0;
+	margin-top: 0.3125rem;
+	text-align: center;
+}
+
+
+.dropdown-content1 {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	background: transparent;
+	margin-left: 0.625rem;
+	text-align: center;
+}
+
+.dropdown:hover .dropdown-content1 {
+	display: block;
+}
+
+.dropdown-content1 a {
+	color: black;
+	display: block;
+	border: 0.125rem solid #ffffff;
+	border-radius: 1.25rem;
+	background-color: #E0E0E0;
+	min-height: 1.25rem;
+	min-width: 3.125rem;
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+.dropdown-content1 a:hover {
+	background-color: #ddd;
+}
+
+.dropdown-content2 {
+	display: none;
+	position: absolute;
+	background: transparent;
+}
+
+.dropdown:hover .dropdown-content2 {
+	display: block;
+}
+
+.dropdown-content2 a {
+	color: black;
+	display: block;
+	border: 0.125rem solid #ffffff;
+	border-radius: 1.25rem;
+	background-color: #E0E0E0;
+	max-height: 2.5rem;
+	max-width: 6.25rem;
+	font-size: 1.25rem;
+	font-weight: bold;
+}
+
+.dropdown-content2 a:hover {
+	background-color: #ddd;
+}
+
+/*home*/
+.quick-bill-pay-container {
+	width: 21.875rem;
+	max-width: 21.875rem;
+	padding: 1.25rem;
+	background-color: #fff;
+	background: var(--c-form-bg);
+	border-radius: 0.625rem;
+	margin-right: 50%;
+	margin-top: 8rem;
+}
+
+#quick-bill-header {
+	text-align: center;
+	margin-bottom: 1.25rem;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+.input-group {
+	margin-bottom: 1.25rem;
+	border: 0.125rem solid #ccc;
+	border-radius: 0.3125rem;
+	background: var(--c-input-field-bg);
+}
+
+#consumerNo-label {
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+#consumerNo {
+	font-size: 0.96875rem;
+	width: 70%;
+	height: 3.75rem;
+	padding: 0.3125rem;
+	border: 0.0625rem solid transparent;
+	border-radius: 0.3125rem;
+	outline: none;
+	background: var(--c-input-field-bg);
+}
+
+#sample-bill {
+	border-bottom: 0.0625rem solid black;
+}
+
+#sample-bill:hover {
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#submit-button {
+	height: 3.75rem;
+	padding: 0.625rem;
+	background-color: var(--c-submit-btn-bg);
+	color: #fff;
+	border: none;
+	border-radius: 0.3125rem;
+	cursor: pointer;
+}
+
+#submit-button:hover {
+	background-color: var(--c-submit-btn-hover);
+}
+
+.captcha-group{
+	font-size: 1.25rem;
+}
+
+#captcha {
+	width: 1em;
+    height: 1em;
+}
+
+.popup-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: none;
+	justify-content: center;
+	align-items: center;
+	z-index: 9999;
+}
+
+.popup-content {
+	background-color: #fff;
+	padding: 1.25rem;
+	border-radius: 0.3125rem;
+	max-width: 80%;
+	max-height: 80%;
+	overflow: auto;
+	text-align: center;
+}
+
+.centered-text {
+	text-align: center;
+	color: red;
+	margin: 0.625rem;
+}
+
+/*error and message*/
+.error {
+	text-align: center;
+	color: red;
+	margin-top: 0.9375rem;
+}
+
+.message {
+	text-align: center;
+	color: green;
+	margin-top: 0.9375rem;
+}
+
+.required::after {
+	content: '*';
+	color: red;
+	margin-left: 0.3125rem;
+}
+
+/*Error Page*/
+.error-container {
+	max-width: 37.5rem;
+	max-height: 25rem;
+	align-self: start;
+	margin-top: 1.875rem;
+	padding: 1.25rem;
+	background-color: #fff;
+	border-radius: 0.3125rem;
+	box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+}
+
+.error-container h1 {
+	color: #d43f3a;
+	text-decoration: underline;
+}
+
+.error-div {
+	padding: 1.25rem;
+	border-radius: 0.3125rem;
+	box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+	margin: 1.875rem 0;
+}
+
+.exception-para {
+	margin-top: 1.25rem;
+	font-size: 1.25rem;
+	overflow: hidden;
+	max-height: 6em;
+}
+
+.empty-exc-para {
+	margin-top: 0;
+}
+
+.back-btn {
+	display: inline-block;
+	padding: 0.4375rem 0.875rem;
+	background-color: #000;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 0.1875rem;
+	margin-top: 0.625rem;
+	font-weight: bold;
+}
+
+/*Count down Seconds*/
+#seconds {
+	font-size: 1.25rem;
+}
+
+/*Media Query*/
+@media screen and (max-width: 500px) {
+	.quick-bill-pay-container {
+		margin-right: 0%;
+	}
+	body {
+    	background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(/images/mob-bg.png);
+    	background-size: 100% 100%;
+    	background-repeat: no-repeat;
+    	background-position: center;
+    	font-family: montserrat;
+    	display: flex;
+    	flex-direction: column;
+    	height: 100svh;
+    }
+    nav {
+        display: contents;
+    }
+}
+
+@media screen and (min-width: 750px) {
+	.quick-bill-pay-container {
+		margin-right: 45%;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.quick-bill-pay-container {
+		margin-right: 50%;
+	}
+}
