@@ -1,5 +1,5 @@
 # CREATING DATABASE
-#CREATE DATABASE EBS;
+CREATE DATABASE EBS;
 USE EBS;
 
 #CREATING TABLE ADMIN_DETAILS
@@ -29,8 +29,6 @@ BEGIN
 END;
 //
 DELIMITER ;
-
-
 
 #------------------------------------------------------------------------------------------------------
 
@@ -65,7 +63,6 @@ END;
 //
 DELIMITER ;
 
-
 #------------------------------------------------------------------------------------------------------
 
 #CREATING TABLE CONSUMER_DETAILS
@@ -93,7 +90,6 @@ BEGIN
 END;
 //
 DELIMITER ;
-
 
 #------------------------------------------------------------------------------------------------------
 
@@ -221,13 +217,14 @@ DO
 
 #CREATING TABLE COST_PER_UNIT
 CREATE TABLE cost_per_unit (
-	id INT PRIMARY KEY CHECK (id = 1),
+	id INT CHECK (id = 1),
     0_to_100 DOUBLE NOT NULL,
     101_to_300 DOUBLE NOT NULL,
     301_to_500 DOUBLE NOT NULL,
     501_and_above DOUBLE NOT NULL,
     add_date DATE,
-    update_date DATE
+    update_date DATE,
+    PRIMARY KEY (id)
 );
 
 INSERT INTO cost_per_unit VALUES (1,3.45,5.55,7.45,8.55, curdate(), curdate());
