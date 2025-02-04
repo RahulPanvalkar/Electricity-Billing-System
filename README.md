@@ -1,7 +1,7 @@
 
 <h1 align="center">
   ⚡ Electricity Billing System<br/>
-  <a href="#" target="_blank">Live Demo</a>
+  <a href="https://electricity-billing-system-cknn.onrender.com" target="_blank">Live Demo</a>
 </h1>
 <div align="center">
   <img alt="Demo" src="./module-resource/images/ebs.png" />
